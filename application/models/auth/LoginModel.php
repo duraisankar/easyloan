@@ -11,7 +11,7 @@ Class LoginModel extends CI_model
     public function verify($data)
     {
 
-        $query1 = "SELECT * FROM  `login` WHERE mobile=?";
+        $query1 = "SELECT * FROM  `login` WHERE phone=?";
         $res1 = $this->db->query($query1, array($data['phone']));
 
         if ($res1->num_rows() == 1) {
@@ -21,6 +21,8 @@ Class LoginModel extends CI_model
             return false;
         }
     }
+
+
 
 
 }

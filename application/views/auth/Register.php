@@ -37,28 +37,30 @@
     <div class="register-box-body">
         <p class="login-box-msg">Register a new membership</p>
 
-        <form action="../../index.html" method="post">
+        <?php echo validation_errors(); ?>
+
+        <?php echo form_open('auth/Register/validate'); ?>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" name="Name" placeholder="Full name">
+                <input type="text" class="form-control" name="name" placeholder="Full name">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="phone" class="form-control" name="mobile" placeholder="Phone">
+                <input type="phone" class="form-control" name="phone" placeholder="Phone">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
             </div>
 
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" name="email" placeholder="Email">
+                <input type="email" name="email" class="form-control" name="email" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
 
 
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password">
+                <input type="password" name="rpassword" class="form-control" placeholder="Retype password">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div class="row">
@@ -75,7 +77,8 @@
                 </div>
                 <!-- /.col -->
             </div>
-        </form>
+        <?php echo form_close(); ?>
+
 
 
         <a href="login" class="text-center">I already have a membership</a>

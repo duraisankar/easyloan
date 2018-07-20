@@ -18,7 +18,7 @@ Class Login extends CI_Controller
 
     }
 
-    public function validation()
+    public function validate()
     {
         $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -35,79 +35,40 @@ Class Login extends CI_Controller
 
             $hash = $res1->password;
             $role = $res1->role;
-            $verified = $res1->verified;
-            $id = $res1->id;
+            $phone = $res1->phone;
 
             if (password_verify($data['password'], $hash)) {
-                if ($verified == 1) {
 
-                    $this->session->set_userdata('id', $id);
+
+                    $this->session->set_userdata('phone', $phone);
                     $this->session->set_userdata('role', $role);
 
-                    $data = array(
-                        'ip' => $this->input->ip_address(),
-                        'id' => $id
-                    );
 
-                    $this->load->model('auth/LoginModel');
-                    if ($res2) {
                         switch ($role) {
                             case 1:
-                                redirect('farmer/main');
+                                redirect('student/main');
                                 break;
 
                             case 2:
-                                redirect('retailer/main');
+                                redirect('zonal/main');
                                 break;
 
                             case 3:
-                                redirect('fpi/main');
-                                break;
-
-                            case 4:
-                                redirect('storage/main');
-                                break;
-
-                            case 5:
-                                redirect('transport/main');
+                                redirect('head/main');
                                 break;
 
                             default:
                                 break;
 
                         }
-                    } else {
-                        $data = array(
-                            'error' => '<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>User Not Found Please Register And Try Again</div>'
-                        );
-                        $this->load->view('includes/MainHeader');
-                        $this->load->view('auth/Login', $data);
-                        $this->load->view('includes/MainFooter');
-                    }
-                } else {
-                    $data = array(
-                        'error' => '<div class="alert alert-dismissible alert-secondary">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>Email Verification Is Pending Please Check Your Mail And Follow The Procedure</div> '
-                    );
-                    $this->load->view('includes/MainHeader');
-                    $this->load->view('auth/Login', $data);
-                    $this->load->view('includes/MainFooter');
-
-                }
-            } else {
-                $data = array(
-                    'error' => '<div class="alert alert-dismissible alert-secondary">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>Either Username Or Password Is Incorrect</div>'
-                );
-                $this->load->view('auth/Login', $data);
 
 
-            }
+            }else { echo "pas";}
         } else {
+
             $data = array(
                 'error' => '<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>User Not Found Please Register And Try Again</div>'
+  <button type="button" class="close" data-dismiss="alert">&times;</button>Error</div>'
             );
             $this->load->view('auth/Login', $data);
 

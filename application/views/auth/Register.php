@@ -55,6 +55,8 @@
             </div>
 
 
+
+
             <div class="form-group has-feedback">
                 <input type="password" name="password" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -63,6 +65,16 @@
                 <input type="password" name="rpassword" class="form-control" placeholder="Retype password">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
+
+        <div class="form-group has-feedback">
+            <label>Profession</label>
+            <select name="type" class="form-group">
+                <option value="1">Student</option>
+                <option value="2">Zonal</option>
+                <option value="3">Head</option>
+
+            </select>
+        </div>
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">

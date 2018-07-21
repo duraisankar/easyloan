@@ -39,12 +39,16 @@
 
         <?php echo form_open('auth/Login/validate'); ?>
 
-            <div class="form-group has-feedback">
-                <input type="phone" class="form-control" placeholder="Phone">
+        <?php echo validation_errors(); ?>
+
+        <?php echo $error; ?>
+
+        <div class="form-group has-feedback">
+                <input type="text" name="phone" class="form-control" placeholder="Phone">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" name="password" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">

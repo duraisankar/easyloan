@@ -6,7 +6,7 @@ class Logout extends CI_Controller {
 
     public function index()
     {
-        $this->session->unset_userdata('id');
+        $this->session->unset_userdata('phone');
         $this->session->unset_userdata('role');
         $this->session->sess_destroy();
         redirect('auth/Login');

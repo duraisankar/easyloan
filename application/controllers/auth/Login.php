@@ -6,6 +6,9 @@ Class Login extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper('Session_helper');
+        isLogin();
+
     }
 
     public function index()
@@ -20,9 +23,9 @@ Class Login extends CI_Controller
 
     public function validate()
     {
+
         $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
-
 
         $data = array(
             'phone' => $this->input->post('phone'),
@@ -31,6 +34,7 @@ Class Login extends CI_Controller
 
         $this->load->model('auth/LoginModel');
         $res1 = $this->LoginModel->verify($data);
+
         if ($res1) {
 
             $hash = $res1->password;
@@ -46,15 +50,15 @@ Class Login extends CI_Controller
 
                         switch ($role) {
                             case 1:
-                                redirect('student/main');
+                                redirect('student/');
                                 break;
 
                             case 2:
-                                redirect('zonal/main');
+                                redirect('zonal/');
                                 break;
 
                             case 3:
-                                redirect('head/main');
+                                redirect('head/');
                                 break;
 
                             default:
@@ -67,8 +71,11 @@ Class Login extends CI_Controller
         } else {
 
             $data = array(
-                'error' => '<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>Error</div>'
+                'error' => '<div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                Password or Username Incorrect!
+              </div>'
             );
             $this->load->view('auth/Login', $data);
 

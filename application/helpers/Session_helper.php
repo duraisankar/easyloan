@@ -11,20 +11,24 @@ function isLogin ()
     if (isset($id) && isset($role)) {
         switch ($role) {
             case 1:
-
-                redirect('student/main');
+                redirect('student/');
                 break;
 
             case 2:
-                redirect('zonal/main');
+                redirect('zonal/');
                 break;
 
             case 3:
-                redirect('head/main');
+                redirect('lawyer/');
                 break;
 
+            case 4:
+                redirect('engineer/');
+                break;
 
             default:
+
+                redirect('auth/login/');
                 break;
         }
     }
@@ -40,7 +44,6 @@ function is_session_exist($r)
     if ($role!=$r) {
         switch ($role) {
             case 1:
-
                 redirect('student/');
                 break;
 
@@ -49,11 +52,19 @@ function is_session_exist($r)
                 break;
 
             case 3:
-                redirect('head/');
+                redirect('lawyer/');
+                break;
+
+            case 4:
+                redirect('engineer/');
                 break;
 
             default:
+
+                redirect('/auth/login/');
+
                 break;
+
         }
     }
 

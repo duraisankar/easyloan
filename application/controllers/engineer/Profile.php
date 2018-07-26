@@ -7,14 +7,14 @@ class Profile extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('Session_helper');
-        is_session_exist(1);
+        is_session_exist(4);
 
     }
     public function index()
     {
-        $this->load->view('students/includes/Header');
-        $this->load->view('students/Profile');
-        $this->load->view('students/includes/Footer');
+        $this->load->view('engineer/includes/Header');
+        $this->load->view('engineer/Profile');
+        $this->load->view('engineer/includes/Footer');
 
 
     }

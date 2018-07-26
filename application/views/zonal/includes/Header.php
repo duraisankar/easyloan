@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Easy Loan | Page</title>
+    <title>Easy Loan | Admin Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -18,6 +18,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/_all-skins.min.css">
+
+    <script src="<?php echo base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +58,7 @@
                 <ul class="nav navbar-nav">
 
                     <li>
-                        <a href="/auth/logout"><i class="fa fa-gears"></i> Logout</a>
+                        <a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -71,11 +74,11 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="<?php echo base_url();?>assets/dist/img/icons/zonal.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <p> Kamala Kannan</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Zonal Officer</a>
                 </div>
             </div>
             <!-- search form -->
@@ -84,20 +87,15 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                    </ul>
-                </li>
 
-                <li><a href="apply"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+
+                <li id="dash"><a href="/zonal/"><i class="fa fa-dashboard"></i> <span> Dashboard</span></a></li>
+                <li id="app"><a href="/zonal/applications/"><i class="fa fa-book"></i> <span> Applications</span></a></li>
+                <li id="profile"><a href="/zonal/profile/"><i class="fa fa-user"></i> <span> Profile</span></a></li>
+                <li id="settings"><a href="/zonal/"><i class="fa fa-cogs"></i> <span> Settings</span></a></li>
+
+
+
 
             </ul>
         </section>

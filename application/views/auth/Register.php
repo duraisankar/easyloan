@@ -62,8 +62,6 @@
             </div>
 
 
-
-
             <div class="form-group has-feedback">
                 <input type="password" name="password" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -80,15 +78,18 @@
                 <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                 </div>
-                <input type="text" class="form-control pull-right" id="datepicker">
+                <input type="text" name="dob" class="form-control pull-right" id="datepicker">
             </div>
             <!-- /.input group -->
         </div>
         <div class="form-group">
-            <select name="type" class="form-group select2" data-placeholder="Select a State" style="width:100%;height: 34px;">
+            <select name="role" class="form-group select2" data-placeholder="Select your Role" style="width:100%;height: 34px;">
                 <option value="1">Student</option>
-                <option value="2">Zonal</option>
-                <option value="3">Head</option>
+                <option value="2">Zonal Officer</option>
+                <option value="3">Bank Manager</option>
+                <option value="4">Engineer</option>
+                <option value="5">Lawyer</option>
+
 
             </select>
         </div>

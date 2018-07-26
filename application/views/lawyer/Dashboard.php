@@ -14,17 +14,13 @@
     <!-- Main content -->
     <section class="content">
 
-        <script>
-            $("#dash").addClass("active");
-        </script>
-
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="fa fa-inbox"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Pending Loan Request</span>
+                        <span class="info-box-text">Pending </span>
                         <span class="info-box-number">
                             0                            </span>
                     </div>
@@ -44,7 +40,7 @@
                     <span class="info-box-icon bg-green"><i class="fa fa-envelope-o"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Approved Loan Request</span>
+                        <span class="info-box-text">Approved </span>
                         <span class="info-box-number">
                                 2                            </span>
                     </div>
@@ -58,7 +54,7 @@
                     <span class="info-box-icon bg-yellow"><i class="fa fa-trash"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Unapproved Loan Request</span>
+                        <span class="info-box-text">Unapproved </span>
                         <span class="info-box-number">
                             0                            </span>
                     </div>

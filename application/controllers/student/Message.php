@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profile extends CI_Controller {
+class Message extends CI_Controller {
 
     public function __construct()
     {
@@ -13,7 +13,7 @@ class Profile extends CI_Controller {
     public function index()
     {
         $this->load->view('students/includes/Header');
-        $this->load->view('students/Profile');
+        $this->load->view('students/Message');
         $this->load->view('students/includes/Footer');
 
 

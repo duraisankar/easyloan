@@ -14,7 +14,7 @@ class Apply extends CI_Controller {
     public function index()
     {
         $this->load->view('students/includes/Header');
-        $this->load->view('students/Apply');
+        $this->load->view('students/Apply/one');
         $this->load->view('students/includes/Footer');
 
 
@@ -23,11 +23,20 @@ class Apply extends CI_Controller {
     public function two()
     {
         $this->load->view('students/includes/Header');
-        $this->load->view('students/Apply');
+        $this->load->view('students/Apply/two');
         $this->load->view('students/includes/Footer');
 
 
     }
+    public function three()
+    {
+        $this->load->view('students/includes/Header');
+        $this->load->view('students/Apply/three');
+        $this->load->view('students/includes/Footer');
+
+
+    }
+
 
 
 }

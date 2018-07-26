@@ -13,9 +13,9 @@ class Main extends CI_Controller {
     }
     public function index()
     {
-        $this->load->view('students/includes/Header');
-        $this->load->view('students/Dashboard');
-        $this->load->view('students/includes/Footer');
+        $this->load->view('zonal/includes/Header');
+        $this->load->view('zonal/Dashboard');
+        $this->load->view('zonal/includes/Footer');
 
 
     }

@@ -1,3 +1,7 @@
+
+<script>
+    $("#dash").addClass("active");
+</script>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -20,7 +24,7 @@
                     <span class="info-box-icon bg-aqua"><i class="fa fa-inbox"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Pending Letters</span>
+                        <span class="info-box-text">Pending Loan Applications</span>
                         <span class="info-box-number">
                             0                            </span>
                     </div>
@@ -40,7 +44,7 @@
                     <span class="info-box-icon bg-green"><i class="fa fa-envelope-o"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Approved Letters</span>
+                        <span class="info-box-text">Approved Loan Applications</span>
                         <span class="info-box-number">
                                 2                            </span>
                     </div>
@@ -54,7 +58,7 @@
                     <span class="info-box-icon bg-yellow"><i class="fa fa-trash"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Unapproved Letters</span>
+                        <span class="info-box-text">Unapproved Loan Applications</span>
                         <span class="info-box-number">
                             0                            </span>
                     </div>

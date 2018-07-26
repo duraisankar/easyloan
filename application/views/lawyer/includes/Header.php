@@ -19,6 +19,9 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/_all-skins.min.css">
 
+    <script src="<?php echo base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,7 +32,7 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 
 <div class="wrapper">
 
@@ -39,7 +42,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>ESY</b>L</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>ESY</b>L</span>
+            <span class="logo-lg"><b>EASY</b>LOAN</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -55,7 +58,7 @@
                 <ul class="nav navbar-nav">
 
                     <li>
-                        <a href="<?php echo base_url();?>auth/logout" "><i class="fa fa-gears"></i> Logout</a>
+                        <a href="<?php echo base_url();?>auth/logout" "><i class="fa fa-sign-out"></i> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -74,8 +77,8 @@
                     <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <p>Gangadharan K</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Lawyer</a>
                 </div>
             </div>
             <!-- search form -->
@@ -84,20 +87,14 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                    </ul>
-                </li>
 
-                <li><a href="apply"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+                <li><a href="/lawyer"><i class="fa fa-dashboard"></i> <span> Dashboard</span></a></li>
+
+                <li><a href="assignments"><i class="fa fa-book"></i> <span>Assignments</span></a></li>
+
+                <li><a href="profile"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+
+                <li><a href="settings"><i class="fa fa-cogs"></i> <span>Settings</span></a></li>
 
             </ul>
         </section>

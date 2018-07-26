@@ -9,13 +9,13 @@ class Main extends CI_Controller {
         $this->load->helper('Session_helper');
         is_session_exist(1);
 
+
     }
     public function index()
     {
         $this->load->view('students/includes/Header');
         $this->load->view('students/Dashboard');
         $this->load->view('students/includes/Footer');
-
 
     }
 

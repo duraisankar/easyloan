@@ -20,7 +20,7 @@ class Register extends CI_Controller {
     {
 
         $this->form_validation->set_rules('name', 'name', 'trim|required');
-        $this->form_validation->set_rules('mobile', 'mobile', 'trim|required');
+        $this->form_validation->set_rules('phone', 'phone', 'trim|required');
         $this->form_validation->set_rules('password', 'password', 'trim|required');
         $this->form_validation->set_rules('rpassword', 'rpassword', 'matches[password]trim|required');
 
@@ -30,24 +30,93 @@ class Register extends CI_Controller {
                 'cost' => 12
             );
             $password = password_hash($password, PASSWORD_BCRYPT, $options);
-            $mdata = array(
-                'sno'=>'45',
-                'name' => $this->input->post('name'),
-                'phone' => $this->input->post('phone')
 
-            );
+            $role = $this->input->post('role');
+
+
+            if ($role==1) {
+
+                $mdata = array(
+                    'id'=>'12',
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'dob' => $this->input->post('dob'),
+                    'phone' => $this->input->post('phone')
+
+
+                );
+
+                $this->RegisterModel->insertstudent($mdata);
+
+                redirect('/signupcomplete');
+
+
+            }
+            if ($role == 2) {
+
+                $mdata = array(
+                    'name' => $this->input->post('name'),
+                    'phone' => $this->input->post('phone'),
+                    'email' => $this->input->post('email'),
+                    'dob' => $this->input->post('dob')
+
+
+                );
+
+                $this->RegisterModel->insertzonal($mdata);
+                redirect('/signupcomplete');
+
+            }
+            if ($role == 3) {
+
+                $mdata = array(
+                    'name' => $this->input->post('name'),
+                    'phone' => $this->input->post('phone'),
+                    'email' => $this->input->post('email'),
+                    'dob' => $this->input->post('dob')
+
+
+                );
+
+                $this->RegisterModel->insertmanager($mdata);
+                redirect('/signupcomplete');
+
+
+            }
+            if ($role == 4) {
+
+                $mdata = array(
+                    'name' => $this->input->post('name'),
+                    'phone' => $this->input->post('phone'),
+                    'email' => $this->input->post('email'),
+                    'dob' => $this->input->post('dob')
+
+
+                );
+
+                $this->RegisterModel->insertmanager($mdata);
+                redirect('/signupcomplete');
+
+            }
+
+
             $ldata = array(
-                'mobile' => $this->input->post('phone'),
-                'password' => $password
+                'phone' => $this->input->post('phone'),
+                'password' => $password,
+                'role' => $this->input->post('role')
+
 
             );
 
 
-            $this->RegisterModel->insertmaster($mdata);
             $this->RegisterModel->insertlogin($ldata);
+            redirect('/signupcomplete');
 
-        }else {
-            echo "error";
+        }
+
+        else {
+            $data = array(
+            'error' => 'dgfdfgfg' );
         }
 
     }

@@ -14,18 +14,11 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/AdminLTE.min.css">
-
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/select2/dist/css/select2.min.css">
-
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/_all-skins.min.css">
 
-
     <script src="<?php echo base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
-
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,7 +29,7 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-yellow sidebar-mini">
 
 <div class="wrapper">
 
@@ -46,7 +39,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>ESY</b>L</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Easy</b>Loan</span>
+            <span class="logo-lg"><b>EASY</b>L</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -62,14 +55,12 @@
                 <ul class="nav navbar-nav">
 
                     <li>
-                        <a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a>
+                        <a href="<?php echo base_url();?>auth/logout" "><i class="fa fa-sign-out"></i> Logout</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-    <!-- =============================================== -->
 
     <!-- Left side column. contains the sidebar -->
     <aside class="main-sidebar">
@@ -78,33 +69,25 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="<?php echo base_url();?>assets/dist/img/icons/student.png" class="img-circle" alt="User Image">
+                    <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Durai Sankar</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Student</a>
+                    <p>Kamala Kannan</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Engineer</a>
                 </div>
             </div>
             <!-- search form -->
-
+           
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-
-                <li id="dash"><a href="/student/"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-
-                <li id="apply"><a href="/student/apply/"><i class="fa fa-book"></i> <span>Apply Loan</span></a></li>
-
-                <li id="track"><a href="/student/trackloan/"><i class="fa fa-map"></i> <span>Track Loan</span></a></li>
-                <li id="message"><a href="/student/message/"><i class="fa fa-comment"></i> <span>Message</span></a></li>
-
-
-                <li id="profile"><a href="/student/profile/"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-
+                <li><a href=""><i class="fa fa-dashboard"></i> <span> Dashboard</span></a></li>
+                <li><a href=""><i class="fa fa-inbox"></i> <span> Send Private Message</span></a></li>
+                <li><a href=""><i class="fa fa-book"></i> <span> Assignments</span></a></li>
+                <li><a href=""><i class="fa fa-user"></i> <span> Profile</span></a></li>
 
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
-

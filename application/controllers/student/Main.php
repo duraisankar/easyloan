@@ -1,13 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Student extends CI_Controller {
+class Main extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
         $this->load->helper('Session_helper');
-
         is_session_exist(1);
 
     }
@@ -19,8 +18,6 @@ class Student extends CI_Controller {
 
 
     }
-    public function apply()
-    {
-        $this->load->view('Main');
-    }
+
+
 }

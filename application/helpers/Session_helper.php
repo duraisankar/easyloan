@@ -12,15 +12,15 @@ function isLogin ()
         switch ($role) {
             case 1:
 
-                redirect('student/');
+                redirect('student/main');
                 break;
 
             case 2:
-                redirect('zonal/');
+                redirect('zonal/main');
                 break;
 
             case 3:
-                redirect('head/');
+                redirect('head/main');
                 break;
 
 
@@ -52,10 +52,10 @@ function is_session_exist($r)
                 redirect('head/');
                 break;
 
-
             default:
                 break;
         }
     }
+
 }
 

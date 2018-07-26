@@ -39,7 +39,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+            <h1 class="mb-5">Get your loan instantly!</h1>
               <br><a href="auth/register" class="btn btn-primary">Register Now!</a>
 
           </div>
